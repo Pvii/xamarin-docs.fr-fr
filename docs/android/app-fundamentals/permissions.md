@@ -17,12 +17,12 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Les applications Android s’exécutent dans leur propre bac à sable et pour la sécurité de raisons n’ont pas accès à certaines ressources système ou du matériel sur l’appareil. L’utilisateur doit accorder explicitement l’autorisation de l’application avant qu’elle peut utiliser ces ressources. Par exemple, une application ne peut pas accéder au GPS sur un appareil sans autorisation explicite de l’utilisateur. Android lèvera une `Java.Lang.SecurityException` si une application tente d’accéder à une ressource protégée sans autorisation.
+Les applications Android s’exécutent dans leur propre bac à sable et pour des raisons de sécurité elles n’ont pas accès à certaines ressources système ou matériel de l’appareil. L’utilisateur doit accorder explicitement l’autorisation à l’application avant qu’elle puisse utiliser ces ressources. Par exemple, une application ne peut pas accéder au GPS sur un appareil sans autorisation explicite de l’utilisateur. Android lèvera une `Java.Lang.SecurityException` si une application tente d’accéder à une ressource protégée sans autorisation.
 
 Les autorisations sont déclarées dans le **AndroidManifest.xml** par le développeur de l’application lors du développement de l’application. Android comprend deux workflows distincts pour obtenir le consentement de l’utilisateur pour ces autorisations :
  
-* Pour les applications ciblant Android 5.1 (API niveau 22) ou version antérieure, la demande d’autorisation lors de l’application a été installée. Si l’utilisateur n’a pas accordé les autorisations, l’application n’est pas installée. Une fois que l’application est installée, il n’est pas possible de révoquer les autorisations, à l’exception en désinstallant l’application.
-* À compter de Android 6.0 (API niveau 23), les utilisateurs ont été donnés davantage de contrôle sur les autorisations ; Vous pouvez accorder ou révoquer des autorisations, que l’application est installée sur l’appareil. Cette capture d’écran montre les paramètres d’autorisation pour l’application Contacts de Google. Elle répertorie les différentes autorisations et permet à l’utilisateur Activer ou désactiver les autorisations :
+* Pour les applications ciblant Android 5.1 (API niveau 22) ou version antérieure, la demande d’autorisation lors de l'installation de l’application. Si l’utilisateur n’a pas accordé les autorisations, l’application n’est pas installée. Une fois que l’application est installée, il n’est pas possible de révoquer les autorisations, sauf en désinstallant l’application.
+* À compter de Android 6.0 (API niveau 23), les utilisateurs ont davantage de contrôle sur les autorisations ; Vous pouvez accorder ou révoquer des autorisations, tant que l’application est installée sur l’appareil. Cette capture d’écran montre les paramètres d’autorisation pour l’application Contacts de Google. Elle répertorie les différentes autorisations et permet à l’utilisateur d'activer ou désactiver les autorisations :
 
 ![Exemple d’écran des autorisations](permissions-images/01-permissions-check.png) 
 
